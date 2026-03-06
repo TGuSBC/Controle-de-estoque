@@ -25,50 +25,53 @@
                 <li class="nav-item"><button class="nav-link" onclick="showTab('produtos')">Produtos</button></li>
             </ul>
 
-            <div id="dashboard" class="tab active">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>Total Produtos</h5>
-                                <h2 id="total_produtos">-</h2>
+            <div class="area-genr">
+                    <div id="dashboard" class="tab active">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Total Produtos</h5>
+                                    <h2 id="total_produtos">-</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Total Movimentações</h5>
+                                    <h2 id="total_mov">-</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>Total Movimentações</h5>
-                                <h2 id="total_mov">-</h2>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="btn btn-primary" onclick="loadDashboard()">Atualizar</button>
                 </div>
-                <button class="btn btn-primary" onclick="loadDashboard()">Atualizar</button>
-            </div>
 
-            <div id="entrada" class="tab">
-                <h3>Registrar Entrada</h3>
-                <input id="e_sku" class="form-control mb-2" placeholder="SKU">
-                <input id="e_corredor" class="form-control mb-2" placeholder="Corredor">
-                <input id="e_qtd" class="form-control mb-2" placeholder="Quantidade">
-                <button class="btn btn-success" onclick="entrada()">Registrar</button>
-            </div>
+                <div id="entrada" class="tab">
+                    <h3>Registrar Entrada</h3>
+                    <input id="e_sku" class="form-control mb-2" placeholder="SKU">
+                    <input id="e_corredor" class="form-control mb-2" placeholder="Corredor">
+                    <input id="e_qtd" class="form-control mb-2" placeholder="Quantidade">
+                    <button class="btn btn-success" onclick="entrada()">Registrar</button>
+                </div>
 
-            <div id="saida" class="tab">
-                <h3>Registrar Saída</h3>
-                <input id="s_sku" class="form-control mb-2" placeholder="SKU">
-                <input id="s_corredor" class="form-control mb-2" placeholder="Corredor">
-                <input id="s_qtd" class="form-control mb-2" placeholder="Quantidade">
-                <button class="btn btn-danger" onclick="saida()">Registrar</button>
-            </div>
+                <div id="saida" class="tab">
+                    <h3>Registrar Saída</h3>
+                    <input id="s_sku" class="form-control mb-2" placeholder="SKU">
+                    <input id="s_corredor" class="form-control mb-2" placeholder="Corredor">
+                    <input id="s_qtd" class="form-control mb-2" placeholder="Quantidade">
+                    <button class="btn btn-danger" onclick="saida()">Registrar</button>
+                </div>
 
-            <div id="produtos" class="tab">
-                <h3>Cadastrar Produto</h3>
-                <input id="p_nome" class="form-control mb-2" placeholder="Nome">
-                <input id="p_sku" class="form-control mb-2" placeholder="SKU">
-                <button class="btn btn-primary" onclick="produto()">Cadastrar</button>
+                <div id="produtos" class="tab">
+                    <h3>Cadastrar Produto</h3>
+                    <input id="p_nome" class="form-control mb-2" placeholder="Nome">
+                    <input id="p_sku" class="form-control mb-2" placeholder="SKU">
+                    <button class="btn btn-primary" onclick="produto()">Cadastrar</button>
+                </div>
             </div>
+            
         </div>
 </body>
 </html>
