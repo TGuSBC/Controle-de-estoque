@@ -29,7 +29,28 @@ body{
     display:block;
 }
 
-
-.card{
-    margin-bottom:20px
+.area-genr{
+    width: 100%;
+    padding: 0 25%;
 }
+
+.col{
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+.area-genr input{
+    margin-top: 15px;
+
+}
+
+.area-genr button{
+    margin-top: 15px;
+}
+
+.dashboard{
+    width: 100%;
+    
+}
+
+
