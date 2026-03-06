@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movimentação</title>
+</head>
+<body>
+
+<h2>Movimentar Estoque</h2>
+
+SKU <input id="sku" autofocus><br>
+Corredor <input id="corredor"><br>
+
+<select id="tipo">
+<option value="ENTRADA">Entrada</option>
+<option value="SAIDA">Saida</option>
+</select>
+
+Quantidade <input id="quantidade" value="1" type="number">
+
+<button onclick="mov()">Enviar</button>
+
+<p id="res"></p>
+
+<script>
+async function mov(){
+
+const r=await fetch("http://localhost:7007/movimentar",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+sku:document.getElementById("sku").value,
+corredor:document.getElementById("corredor").value,
+tipo:document.getElementById("tipo").value,
+quantidade:parseInt(document.getElementById("quantidade").value)
+})
+})
+
+const d=await r.json()
+document.getElementById("res").innerText=JSON.stringify(d)
+
+}
+
+document.getElementById("sku").addEventListener("keypress",function(e){
+if(e.key==="Enter"){mov()}
+})
+</script>
+
+</body>
+</html>
