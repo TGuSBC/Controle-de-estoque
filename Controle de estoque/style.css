@@ -59,4 +59,13 @@ body{
     
 }
 
+@media (max-width: 400px) {
+    .col{
+        padding: 0;
+    }
+    .col h5{
+        font-size: 18px;
+    }
+}
+
 
