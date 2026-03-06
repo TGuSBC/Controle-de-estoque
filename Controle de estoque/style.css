@@ -4,8 +4,22 @@
     box-sizing: border-box;
 }
 
-body{background:#f4f6f9}
-.navbar{margin-bottom:20px}
-.tab{display:none}
-.tab.active{display:block}
-.card{margin-bottom:20px};
+body{
+    background:#f4f6f9
+}
+
+.navbar{
+    margin-bottom:20px
+}
+
+.tab{
+    display:none
+}
+
+.tab.active{
+    display:block
+}
+
+.card{
+    margin-bottom:20px
+}
